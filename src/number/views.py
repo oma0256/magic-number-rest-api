@@ -1,4 +1,4 @@
-from rest_framework import status
+from rest_framework import status, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .utils import get_magic_number
@@ -7,6 +7,7 @@ from .serializers import MagicNumberSerializer
 
 class MagicNumberView(APIView):
     serializer_class = MagicNumberSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def get(self, request):
         magic_number = get_magic_number()
