@@ -7,7 +7,7 @@ services:
     env_file:
       - .env
     ports:
-      - '3306:3306'
+      - '3307:3306'
     expose:
       - '3306'
     volumes:
@@ -16,6 +16,7 @@ services:
   django:
     build:
       context: .
+    container_name: web
     env_file:
     - .env
     command: python src/manage.py runserver 0.0.0.0:8000

@@ -1,14 +1,15 @@
 certifi==2019.11.28
 chardet==3.0.4
 Django==2.2.7
+django-cors-middleware==1.4.0
 django-oauth-toolkit==1.2.0
 djangorestframework==3.10.3
 entrypoints==0.3
 flake8==3.7.9
 idna==2.8
 mccabe==0.6.1
+mysqlclient==1.4.6
 oauthlib==3.1.0
-# mysqlclient==1.4.6
 pycodestyle==2.5.0
 pyflakes==2.1.1
 pytz==2019.3

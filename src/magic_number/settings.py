@@ -25,7 +25,7 @@ SECRET_KEY = 'wg1mt07orrbthxxa^lz3p#-6gn9!&0*o7vnxm)182k1qp**-p0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.10.100", "localhost"]
 
 
 # Application definition
@@ -40,9 +40,11 @@ INSTALLED_APPS = [
     'number',
     'rest_framework',
     'oauth2_provider',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -51,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'magic_number.urls'
 
