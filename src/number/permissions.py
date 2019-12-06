@@ -6,7 +6,7 @@ class HasPermission(permissions.BasePermission):
         if request.method in permissions.SAFE_METHODS:
             return True
         if request.auth is not None:
-            grant_type = request.auth.application.get_authorization_grant_type_display()
+            grant_type = request.auth.application.get_authorization_grant_type_display()  # noqa
             if request.user is None and grant_type == 'Client credentials':
                 request.user = request.auth.application.user
                 return True
