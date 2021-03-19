@@ -3,7 +3,7 @@ chardet==3.0.4
 Django==2.2.10
 django-cors-middleware==1.4.0
 django-oauth-toolkit==1.2.0
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 entrypoints==0.3
 flake8==3.7.9
 idna==2.8
